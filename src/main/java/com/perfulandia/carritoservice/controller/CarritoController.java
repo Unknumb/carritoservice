@@ -40,7 +40,7 @@ public class CarritoController {
         notificacion.setUsuarioId(savedCarrito.getUsuarioId());
         notificacion.setCarritoId(savedCarrito.getId()); // <-- Añadir esta línea
         notificacion.setMensaje(mensaje);
-        restTemplate.postForObject("http://localhost:8084/api/notificaciones", notificacion, Notificacion.class);
+        restTemplate.postForObject("https://notificacionservice.onrender.com/api/notificaciones", notificacion, Notificacion.class);
 
         return savedCarrito;
     }
